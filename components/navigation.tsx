@@ -2,17 +2,20 @@
 
 import Link from 'next/link'
 import {usePathname} from 'next/navigation'
+import styles from "../styles/nav.module.css"
 
 export default function Navigation() {
     const path = usePathname()
     return(
-        <nav>
-            <li>
-                <Link href='/'>HOME</Link> {path==='/'?"감자":""}
-            </li>
-            <li>
-                <Link href="/about_us">ABout</Link> {path==='/about_us'?"감자":""}
-            </li>
+        <nav className={styles.nav}>
+            <ul>
+                <li>
+                    <Link href='/'>HOME</Link> {path === '/' ? "🐸" : ""}
+                </li>
+                <li>
+                    <Link href="/about_us">ABout</Link> {path === '/about_us' ? "🐸" : ""}
+                </li>
+            </ul>
         </nav>
     )
 }
