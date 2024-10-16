@@ -1,6 +1,6 @@
 import styles from "../styles/movie-video.module.css"
+import {API_URL} from "@/app/constants";
 
-const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 export async function getVideos(id: string): Promise<any> {
     const response = await fetch(`${API_URL}/${id}/videos`);
     // throw new Error("is Broken")
