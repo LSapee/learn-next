@@ -1,5 +1,5 @@
 import styles from "../styles/movie-info.module.css"
-import {API_URL} from "@/app/(home)/page";
+import {API_URL} from "@/components/navigation";
 
 
 export async function getMovie(id: string): Promise<any> {
